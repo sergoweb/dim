@@ -1,0 +1,37 @@
+# name of the software
+name: Diabet
+# current version of the software
+version: 1.1.0
+
+# list of additional links on the right of the top menu
+header_links:
+  - title: Главная
+    url: /
+  - title: Обо Мне
+    url: обо-мне
+  - title: Услуги
+    url: услуги
+  - title: Мои Статьи
+    url: мои-статьи
+  - title: Полезная Информация
+    url: полезная-информация
+  - title: Знаете Ли Вы Что
+    url: знаете-ли-вы-что
+  - title: Контакты
+    url: контакты
+
+background_images:
+  landing_banner: //images.unsplash.com/photo-1430554420274-cdda916a34e4?dpr=1&auto=format&fit=crop&w=1900&h=500
+  water: //images.unsplash.com/reserve/AXx3QORhRDKAMrbb8pX4_photo%202.JPG?dpr=1&auto=format&fit=crop&w=1900&h=500
+  winter_mountain: //images.unsplash.com/photo-1418985991508-e47386d96a71?dpr=1&auto=format&fit=crop&w=1900&h=500
+  summer_mountain: //images.unsplash.com/photo-1471978445661-ad6ec1f5ba50?dpr=1&auto=format&fit=crop&w=1900&h=500
+
+excerpt_separator: <!--more-->
+
+# google analytics
+ga_analytics: UA-93956944-1
+
+exclude: ['README.md', 'LICENSE', 'bower.json', 'Gemfile.lock', 'Gemfile']
+
+# gems:
+#   - jekyll-sitemap

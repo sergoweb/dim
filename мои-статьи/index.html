@@ -1,0 +1,32 @@
+---
+layout: default
+permalink: мои-статьи
+---
+
+<section class='max-width-4 mx-auto my4'>
+  <div class="px2">
+
+    <h1 class="px4 h0 center muted mt0 mb4">Mои Статьи</h1>
+
+    {% for post in site.posts %}
+    <div class="md-whiteframe-2dp bg-white my3">
+      <div class="">
+        <div class="sm-flex">
+          <a href="{{ post.url }}">
+            <div class="bg-center bg-cover bg-silver sixteen-nine"
+              style="min-width: 300px; height: 100%; background-image: url({{ post.image }})"></div>
+          </a>
+          <div class="flex-auto pl3 p2">
+            <a href="{{ post.url }}" class="text-decoration-none">
+              <h2 class="m0 black muted">{{ post.title }}</h2>
+            </a>
+            <p class="mt0"><small>{{ post.date | date: '%B %d, %Y' }}</small></p>
+            <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>

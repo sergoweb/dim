@@ -1,0 +1,19 @@
+<footer class="bg-blue white relative" style="box-shadow: inset 0 12px 12px -10px rgba(0,0,0,0.5)">
+  {% assign footer_image = site.background_images.water %}
+  <div class="banner-img absolute top-0 width-100 height-100" style="background-image: url({{ footer_image }})"></div>
+  <div class="z2 relative">
+    <div class="max-width-4 mx-auto p2">
+      <div class="flex xs-flex-column items-center">
+        <a href="/" class="text-decoration-none white py2">&copy; {{ site.time | date: '%Y' }} Diabet</a>
+        <span class="flex-auto"></span>
+        {% for node in site.header_links %}
+        {% if page.url == node.url %}
+        <a href="{{node.url}}" class="nav-item xs-py1 xs-my1 sm-ml2 relative white text-decoration-none active">{{node.title}}</a>
+        {% else %}
+        <a href="{{node.url}}" class="nav-item xs-py1 xs-my1 sm-ml2 relative white text-decoration-none">{{node.title}}</a>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</footer>

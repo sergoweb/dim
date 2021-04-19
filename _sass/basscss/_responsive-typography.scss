@@ -1,0 +1,41 @@
+
+// Custom Media Query Variables
+
+$breakpoint-xs: '(max-width: 40em)' !default;
+$breakpoint-sm: '(min-width: 40em)' !default;
+$breakpoint-md: '(min-width: 52em)' !default;
+$breakpoint-lg: '(min-width: 64em)' !default;
+
+/* Basscss Responsive Padding */
+
+@media #{$breakpoint-xs} {
+  .xs-left-align   { text-align: left }
+  .xs-center       { text-align: center }
+  .xs-right-align  { text-align: right }
+  .xs-justify      { text-align: justify }
+  .xs-small        { font-size: 90%; }
+}
+
+@media #{$breakpoint-sm} {
+  .sm-left-align   { text-align: left }
+  .sm-center       { text-align: center }
+  .sm-right-align  { text-align: right }
+  .sm-justify      { text-align: justify }
+  .sm-small        { font-size: 90%; }
+}
+
+@media #{$breakpoint-md} {
+  .md-left-align   { text-align: left }
+  .md-center       { text-align: center }
+  .md-right-align  { text-align: right }
+  .md-justify      { text-align: justify }
+  .md-small        { font-size: 90%; }
+}
+
+@media #{$breakpoint-lg} {
+  .lg-left-align   { text-align: left }
+  .lg-center       { text-align: center }
+  .lg-right-align  { text-align: right }
+  .lg-justify      { text-align: justify }
+  .lg-small        { font-size: 90%; }
+}

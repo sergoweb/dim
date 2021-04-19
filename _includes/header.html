@@ -1,0 +1,39 @@
+<header class="bg-blue relative">
+  {% assign header_image = site.background_images.water %}
+  <div class="banner-img absolute top-0 width-100 height-100" style="background-image: url({{ header_image }})"></div>
+  <div class="max-width-4 mx-auto z2 relative">
+    <div class="flex justify-center items-center px2">
+      <div class='center py2 xs-pr4 white'>
+        <a href="/">
+          <img src="assets/logo-white.png" class="fit" />
+        </a>
+      </div>
+      <div class="flex-auto"></div>
+      <p class="white h3 right-align xs-small">
+        Николай Мазур
+        <br>
+        <span class="muted h4">(647) 766 3143</span>
+        <br>
+        <span class="muted h4"><a href="mailto:n.mazur@hotmail.com"
+            class="white text-decoration-none">n.mazur@hotmail.com</a></span>
+      </p>
+    </div>
+  </div>
+  <div class="bg-blue md-whiteframe-4dp">
+    <div class="bg-darken-3">
+      <div class="max-width-4 mx-auto py2">
+        <nav class="flex-auto flex justify-between px2 xs-flex-column xs-center">
+          {% for node in site.header_links %}
+          {% if page.url == node.url %}
+          <a href="{{node.url}}"
+            class="nav-item xs-py1 xs-my1 relative white bold text-decoration-none caps active">{{node.title}}</a>
+          {% else %}
+          <a href="{{node.url}}"
+            class="nav-item xs-py1 xs-my1 relative white bold text-decoration-none caps">{{node.title}}</a>
+          {% endif %}
+          {% endfor %}
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,99 @@
+---
+layout: default
+---
+
+<section class='mt4'>
+  <h1 class="px4 max-width-4 mx-auto center mt0 mb4">Профессиональные консультации из Канады on-line</h1>
+
+  <div class="md-whiteframe-2dp bg-white max-width-4 mx-auto">
+    <div class="max-width-4 mx-auto">
+
+      <div class="px2 py3">
+        <p class="h3 ml3">Николай Мазур, врач-эндокринолог (Россия), сертифицированный консультант по диабету (CDE,
+          Canada)</p>
+        <p class="h3 ml3">Более 20 лет опыта работы с больными сахарным диабетом и предиабетом</p>
+        <p class="h3 ml3">Информация для:</p>
+        <p class="h3 ml3">- Больных сахарным диабетом 2 типа, которые хотят улучшить свое самочувствие и прожить дольше;
+        </p>
+        <p class="h3 ml3">- Медицинских работников, работающих с больными сахарным диабетом;</p>
+        <p class="h3 ml3">- А также для всех, кто хочет получить достоверную информацию от практикующего специалиста о
+          современных методах лечения сахарного диабета в Канаде.</p>
+        <p class="h3 ml3">Только доказательная медицина.</p>
+        <p class="h3 ml3" style="color: red;">Пожалуйста примите к сведению, что я не занимаюсь лечением кого-либо
+          on-line, а оказываю только информационно-просветительские услуги. Однако, если вы болеете сахарным диабетом,
+          то полученная от меня информация может помочь вам составить план лечения с вашим лечащим врачом. </p>
+        <p class="h3 ml3" style="color: red;">Если вы медицинский работник, то полученная информация поможет в лечении
+          ваших больных, а также даст вам возможность сравнить методы лечения диабета второго типа в вашей стране и в
+          Канаде.</p>
+      </div>
+    </div>
+
+    <div class="bg-blue white ts-1 relative overflow-hidden">
+      {% assign cta_image = site.background_images.landing_banner %}
+      <div class="banner-img absolute top-0 width-100 height-100"
+        style="background-image: url('{{ cta_image }}'); background-position: 50% 44%; opacity: 0.95"></div>
+      <div class="banner-outline z2 relative">
+        <div class="max-width-2 mx-auto center py3">
+          <h4 class="h2 z2 relative py3">Не доверяйте сомнительным источникам информации, получите грамотную
+            консультацию у профессионалa</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-width-4 mx-auto">
+      <div class="p4">
+        <h3 class="h3">Вы можете получить достоверную, исчерпывающую информацию по любому вопросу, связанному с сахарным
+          диабетом, включая:</h3>
+        <div class="p2" style="column-count: 2; column-gap: 3rem;">
+          <p class="m0 mb2">Лабораторная диагностика сахарного диабета в Канаде.</p>
+          <p class="m0 mb2">Принципы постановки диагноза.</p>
+          <p class="m0 mb2">Mониторинг сахара в крови, рекомендации Канадской Диабетической Ассоциации.</p>
+          <p class="m0 mb2">Здоровое питание.</p>
+          <p class="m0 mb2">Физическая активность.</p>
+          <p class="m0 mb2">Информация о медикаментах для снижения веса, разрешенных для использования в Канаде.</p>
+          <p class="m0 mb2">Медикаменты для лечения диабета, применяемые в Канаде.</p>
+          <p class="m0 mb2">Снижение веса тела.</p>
+          <p class="m0 mb2">Последние протоколы лечения диабета.</p>
+          <p class="m0 mb2">Осложнения сахарного диабета.</p>
+          <p class="m0 mb2">Холестерин, кровяное давление и сахарный диабет.</p>
+          <p class="m0 mb2">Улучшение качества жизни и увеличение её продолжительности.</p>
+          <p class="m0 mb2">Здравоохранение Канады. Плюсы и минусы.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class='max-width-4 mx-auto my4'>
+  <header>
+    <h1 class="h1 center mb4">Последние Статьи</h1>
+  </header>
+
+  <div class="px2">
+
+    {% for post in site.posts limit:3 %}
+    <div class="md-whiteframe-2dp bg-white my2">
+      <div class="">
+        <div class="sm-flex">
+          <a href="{{ post.url }}">
+            <div class="bg-center bg-cover bg-silver sixteen-nine"
+              style="min-width: 300px; height: 100%; background-image: url({{ post.image }})"></div>
+          </a>
+          <div class="flex-auto pl3 p2">
+            <a href="{{ post.url }}" class="text-decoration-none">
+              <h2 class="m0 black muted">{{ post.title }}</h2>
+            </a>
+            <p class="mt0"><small>{{ post.date | date: '%B %d, %Y' }}</small></p>
+            <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="center mt4">
+      <a href="/мои-статьи" class="black muted">посмотреть все статьи</a>
+    </div>
+
+  </div>
+</section>
